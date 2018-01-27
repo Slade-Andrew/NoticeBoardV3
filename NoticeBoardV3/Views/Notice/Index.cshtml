@@ -1,0 +1,45 @@
+﻿@model IEnumerable<NoticeBoardV3.Models.Notice>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PerOrg.OrganisationName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NoticeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NoticeDesc)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PerOrg.OrganisationName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NoticeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NoticeDesc)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Notice_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Notice_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Notice_ID })
+        </td>
+    </tr>
+}
+
+</table>

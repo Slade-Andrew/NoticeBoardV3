@@ -1,0 +1,50 @@
+﻿@model NoticeBoardV3.Models.Board
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Board</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BoardType_lu.BoardType_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BoardType_lu.BoardType_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PerOrg.OrganisationName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PerOrg.OrganisationName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BoardName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BoardName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BoardDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BoardDesc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Board_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
