@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace NoticeBoardV3.Models
@@ -101,6 +102,7 @@ namespace NoticeBoardV3.Models
         [Required]
         [DataType(DataType.Date)]
         [Display(Name = "Date of birth")]
+        public DateTime DateOfBirth { get; set; }
     }
 
     public class ResetPasswordViewModel
