@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
@@ -11,7 +12,9 @@ namespace NoticeBoardV3.Models
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
-
+        public Location Location { get; set; }
+        public string Gender { get; set; }
+        public DateTime DateOfBirth { get; set; }
         //TODO: Create country table in database, create country Model, create api call to retrieve country, create ajax to call api and populate html select in registration form.
 
         //TODO: Create town/city table in database, create town/city Model, create api call to retrieve town/city, create ajax to call api and populate html select in registration form with all towns/cities of the selected country.

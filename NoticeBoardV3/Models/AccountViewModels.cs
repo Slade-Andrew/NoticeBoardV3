@@ -96,6 +96,10 @@ namespace NoticeBoardV3.Models
         //from https://forums.asp.net/t/2122845.aspx?How+to+Bind+country+list+Through+Web+API+in+MVC+
 
         [Required]
+        [Display(Name = "Location")]
+        public Location Location { get; set; }
+
+        [Required]
         [Display(Name = "Gender")]
         public string Gender { get; set; }
 
