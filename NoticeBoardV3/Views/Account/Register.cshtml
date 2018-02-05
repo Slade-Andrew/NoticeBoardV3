@@ -69,7 +69,10 @@
     <script type="text/javascript">
     // Turn the DateOfBirth input into a jquery datepicker, with a max date of today
     $(document).ready(function () {
-        $("#DateOfBirth").datepicker({ maxDate: '0' });  // http://api.jqueryui.com/datepicker/#option-maxDate
+        $("#DateOfBirth").datepicker({
+            dateFormat: 'dd-mm-yy',
+            maxDate: '0'
+        });  // http://api.jqueryui.com/datepicker/#option-maxDate
     });
     </script>
 @section Scripts {
