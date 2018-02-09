@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Noticeboard</title>
     @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/jqueryui")
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
@@ -42,6 +43,19 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jqueryui")
+    <script type="text/javascript">
+    // Turn any html with id="jquery-dateofbirth-datepicker" into a jquery datepicker, with a max date of today and NZ date format
+    $(function () {
+        $("#jquery-dateofbirth-datepicker").datepicker({
+            changeYear: true,
+            dateFormat: "dd-mm-yyyy",
+            maxDate: '0'
+        });
+        // http://api.jqueryui.com/datepicker/#option-maxDate
+        //https://www.codeguru.com/csharp/.net/net_asp/a-jquery-ui-based-date-picker-for-asp.net-mvc-5.html
+    });
+    </script>
     @RenderSection("scripts", required: false)
 </body>
 </html>

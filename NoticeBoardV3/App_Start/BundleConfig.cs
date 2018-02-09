@@ -26,6 +26,14 @@ namespace NoticeBoardV3
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            // below two bundles included for jQuery UI
+            // https://www.codeguru.com/csharp/.net/net_asp/a-jquery-ui-based-date-picker-for-asp.net-mvc-5.html
+            bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
+                "~/Scripts/jquery-ui-{version}.js"));
+
+            bundles.Add(new StyleBundle("~/Content/jqueryui").Include(
+                "~/Content/themes/base/all.css"));
         }
     }
 }
