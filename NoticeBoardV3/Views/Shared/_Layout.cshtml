@@ -48,9 +48,11 @@
     // Turn any html with id="jquery-dateofbirth-datepicker" into a jquery datepicker, with a max date of today and NZ date format
     $(function () {
         $("#jquery-dateofbirth-datepicker").datepicker({
+            changeMonth: true,
             changeYear: true,
-            dateFormat: "dd-mm-yyyy",
-            maxDate: '0'
+            dateFormat: "dd/mm/yy",
+            maxDate: '0',
+            yearRange: "-100:+0"
         });
         // http://api.jqueryui.com/datepicker/#option-maxDate
         //https://www.codeguru.com/csharp/.net/net_asp/a-jquery-ui-based-date-picker-for-asp.net-mvc-5.html

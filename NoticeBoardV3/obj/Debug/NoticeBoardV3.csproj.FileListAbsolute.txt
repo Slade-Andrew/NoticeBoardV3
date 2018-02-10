@@ -200,3 +200,4 @@ D:\git\NoticeBoardV3\NoticeBoardV3\obj\Debug\NoticeBoardV3.csproj.CoreCompileInp
 D:\git\NoticeBoardV3\NoticeBoardV3\obj\Debug\NoticeBoardV3.dll
 D:\git\NoticeBoardV3\NoticeBoardV3\obj\Debug\NoticeBoardV3.pdb
 D:\git\NoticeBoardV3\NoticeBoardV3\bin\roslyn\System.Collections.Immutable.dll
+D:\git\NoticeBoardV3\NoticeBoardV3\obj\Debug\NoticeBoardV3.csprojResolveAssemblyReference.cache
