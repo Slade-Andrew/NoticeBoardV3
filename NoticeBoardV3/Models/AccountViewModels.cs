@@ -6,8 +6,9 @@ namespace NoticeBoardV3.Models
 {
     public class ExternalLoginConfirmationViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "Please enter a valid email address")]
         [Display(Name = "Email")]
+        [EmailAddress(ErrorMessage = "We couldn't recognise that email. Please enter a valid email address")]
         public string Email { get; set; }
     }
 
@@ -42,19 +43,20 @@ namespace NoticeBoardV3.Models
 
     public class ForgotViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "Please enter a valid email address")]
         [Display(Name = "Email")]
+        [EmailAddress(ErrorMessage = "We couldn't recognise that email. Please enter a valid email address")]
         public string Email { get; set; }
     }
 
     public class LoginViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "Please enter a valid email address")]
         [Display(Name = "Email")]
-        [EmailAddress]
+        [EmailAddress(ErrorMessage = "We couldn't recognise that email. Please enter a valid email address")]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Please enter a password")]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         public string Password { get; set; }
@@ -65,20 +67,20 @@ namespace NoticeBoardV3.Models
 
     public class RegisterViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "Please enter your first name")]
         [Display(Name = "First name")]
         public string FirstName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Please enter your last name")]
         [Display(Name = "Last name")]
         public string LastName { get; set; }
 
-        [Required]
-        [EmailAddress]
+        [Required(ErrorMessage = "Please enter a valid email address")]
         [Display(Name = "Email")]
+        [EmailAddress(ErrorMessage = "We couldn't recognise that email. Please enter a valid email address")]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Please enter a password")]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
@@ -95,28 +97,28 @@ namespace NoticeBoardV3.Models
 
         //from https://forums.asp.net/t/2122845.aspx?How+to+Bind+country+list+Through+Web+API+in+MVC+
 
-        [Required]
+        [Required(ErrorMessage = "Please enter a location")]
         [Display(Name = "Location")]
         public Location Location { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Please enter your gender")]
         [Display(Name = "Gender")]
         public string Gender { get; set; }
 
-        [Required]
-        [DataType(DataType.Date)]
+        [Required(ErrorMessage = "Please enter your date of birth")]
+        [DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         [Display(Name = "Date of birth")]
         public DateTime DateOfBirth { get; set; }
     }
 
     public class ResetPasswordViewModel
     {
-        [Required]
-        [EmailAddress]
+        [Required(ErrorMessage = "Please enter a valid email address")]
         [Display(Name = "Email")]
+        [EmailAddress(ErrorMessage = "We couldn't recognise that email. Please enter a valid email address")]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Please enter a password")]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
@@ -132,9 +134,9 @@ namespace NoticeBoardV3.Models
 
     public class ForgotPasswordViewModel
     {
-        [Required]
-        [EmailAddress]
+        [Required(ErrorMessage = "Please enter a valid email address")]
         [Display(Name = "Email")]
+        [EmailAddress(ErrorMessage = "We couldn't recognise that email. Please enter a valid email address")]
         public string Email { get; set; }
     }
 }
